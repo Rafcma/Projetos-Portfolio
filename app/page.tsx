@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react"
 import Terminal from "@/components/terminal"
 import SequenciaInicializacao from "@/components/sequencia-inicializacao"
+import { AlternadorCRT } from "@/components/alternador-crt"
 
 export default function Home() {
   /* #region Estados */
@@ -21,22 +22,24 @@ export default function Home() {
   /* #endregion */
 
   return (
-    <main className="min-h-screen bg-background relative overflow-hidden">
-     {/* #region Imagem de Fundo */}
-     <div
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
+    <main className="min-h-screen bg-black relative overflow-hidden">
+      {/* #region Imagem de Fundo */}
+      <div
+        className="fixed inset-0 z-0"
         style={{
-          backgroundImage: 'url("/images/background-portfolio.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          width: "100vw",
-          height: "100vh",
+          backgroundColor: "#000000",
         }}
         aria-hidden="true"
       >
         {/* Sobreposição para melhor legibilidade do texto */}
-        <div className="absolute inset-0 bg-black/30" />
-        </div>
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+      {/* #endregion */}
+
+      {/* #region Alternador CRT */}
+      <div className="absolute top-4 right-4 z-50">
+        <AlternadorCRT />
+      </div>
       {/* #endregion */}
 
       {/* #region Conteúdo Principal */}
