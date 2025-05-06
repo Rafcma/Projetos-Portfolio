@@ -32,13 +32,6 @@ export function ArteASCII({ arte }: { arte: string }) {
  ██║  ██║██║  ██║██║     ██║  ██║███████╗███████╗
  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝
                                                  
-   ██████╗ ██████╗ ███████╗████████╗ █████╗ 
-  ██╔════╝██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗
-  ██║     ██║   ██║███████╗   ██║   ███████║
-  ██║     ██║   ██║╚════██║   ██║   ██╔══██║
-  ╚██████╗╚██████╔╝███████║   ██║   ██║  ██║
-   ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝
-                                                 
  ███╗   ███╗ ██████╗ ███╗   ██╗████████╗███████╗
  ████╗ ████║██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝
  ██╔████╔██║██║   ██║██╔██╗ ██║   ██║   █████╗  
@@ -111,7 +104,7 @@ export function ArteASCII({ arte }: { arte: string }) {
   /* #endregion */
 
   return (
-    <pre className="text-white whitespace-pre overflow-x-auto text-xs sm:text-sm md:text-base font-mono">
+    <pre className="text-white whitespace-pre overflow-x-auto text-[0.6rem] xs:text-xs sm:text-sm md:text-base font-mono scale-[0.8] xs:scale-90 sm:scale-100 transform-gpu">
       {mapa_arte[arte] || ""}
     </pre>
   )

@@ -123,8 +123,8 @@ function BarraHabilidade({ nome, porcentagem }: { nome: string; porcentagem: num
   return (
     <div>
       <div className="flex justify-between text-xs mb-1">
-        <span>{nome}</span>
-        <span>{porcentagem}%</span>
+        <span className="truncate mr-2">{nome}</span>
+        <span className="flex-shrink-0">{porcentagem}%</span>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
         <div

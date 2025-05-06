@@ -20,7 +20,9 @@ sobre  educacao  habilidades  experiencia  projetos  certificacoes  contato
 
   return (
     <div className="bg-black p-2 font-mono text-white">
-      <pre className="text-white whitespace-pre overflow-x-auto text-xs sm:text-sm md:text-base">{conteudo_logo}</pre>
+      <pre className="text-white whitespace-pre overflow-x-auto text-[0.6rem] xs:text-xs sm:text-sm md:text-base scale-[0.85] xs:scale-90 sm:scale-100 transform-gpu">
+        {conteudo_logo}
+      </pre>
     </div>
   )
 }

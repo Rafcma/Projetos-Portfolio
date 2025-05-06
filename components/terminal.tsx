@@ -254,7 +254,7 @@ export default function Terminal() {
       {/* #region Cabeçalho do Terminal */}
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
         <TerminalIcon className="h-4 w-4 text-white mr-2" />
-        <span className="text-sm font-mono text-white">
+        <span className="text-xs sm:text-sm font-mono text-white truncate">
           rafael@programador ~ {secao_atual ? `/${secao_atual}` : ""}
         </span>
       </div>
@@ -263,15 +263,15 @@ export default function Terminal() {
       {/* #region Área de Saída do Terminal */}
       <div
         ref={ref_terminal}
-        className="flex-1 bg-black border-x border-white/30 p-4 overflow-y-auto font-mono text-sm"
+        className="flex-1 bg-black border-x border-white/30 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm mobile-terminal-height"
       >
         {historico_comandos.map((cmd, index) => (
-          <div key={index} className="mb-4">
+          <div key={index} className="mb-3 sm:mb-4">
             <div className="flex items-center text-white/70">
               <span className="text-white mr-2">$</span>
-              <span>{cmd.entrada}</span>
+              <span className="break-all">{cmd.entrada}</span>
             </div>
-            <div className="mt-1 ml-4">{cmd.saida}</div>
+            <div className="mt-1 ml-2 sm:ml-4 text-xs sm:text-sm">{cmd.saida}</div>
           </div>
         ))}
       </div>
@@ -287,7 +287,7 @@ export default function Terminal() {
             value={entrada}
             onChange={(e) => setEntrada(e.target.value)}
             onKeyDown={handle_key_down}
-            className="flex-1 bg-transparent border-none outline-none font-mono text-white"
+            className="flex-1 bg-transparent border-none outline-none font-mono text-white text-xs sm:text-sm"
             aria-label="Entrada do terminal"
             autoComplete="off"
             spellCheck="false"
@@ -305,7 +305,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <User className="h-3 w-3 mr-1" />
-          Sobre
+          <span className="hidden xs:inline">Sobre</span>
         </Button>
         <Button
           variant="outline"
@@ -314,7 +314,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <GraduationCap className="h-3 w-3 mr-1" />
-          Educação
+          <span className="hidden xs:inline">Educação</span>
         </Button>
         <Button
           variant="outline"
@@ -323,7 +323,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Shield className="h-3 w-3 mr-1" />
-          Habilidades
+          <span className="hidden xs:inline">Habilidades</span>
         </Button>
         <Button
           variant="outline"
@@ -332,7 +332,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Briefcase className="h-3 w-3 mr-1" />
-          Experiência
+          <span className="hidden xs:inline">Experiência</span>
         </Button>
         <Button
           variant="outline"
@@ -341,7 +341,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Code className="h-3 w-3 mr-1" />
-          Projetos
+          <span className="hidden xs:inline">Projetos</span>
         </Button>
         <Button
           variant="outline"
@@ -350,7 +350,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Award className="h-3 w-3 mr-1" />
-          Certificações
+          <span className="hidden xs:inline">Certificações</span>
         </Button>
         <Button
           variant="outline"
@@ -359,7 +359,7 @@ export default function Terminal() {
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Mail className="h-3 w-3 mr-1" />
-          Contato
+          <span className="hidden xs:inline">Contato</span>
         </Button>
       </nav>
       {/* #endregion */}
