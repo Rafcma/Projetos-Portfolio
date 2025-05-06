@@ -30,9 +30,13 @@ export function RetratoASCIICanvas({
     /* #region Carregamento e Processamento de Imagem */
     const img = new Image()
     img.crossOrigin = "anonymous"
-    img.src =
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-08-19%20at%2023.09.35_bb0e84d7.jpg-vNaMYkbNtPefHIRx2bZUxvJhIofxMZ.jpeg"
+    img.src = "/images/minha-foto.png" // Caminho correto para sua imagem local
 
+    img.onerror = () => {
+      console.error("Erro ao carregar a imagem. Verificando caminho alternativo...")
+      // Fallback para uma imagem padrão caso a primeira falhe
+      img.src = "/images/minha-foto.jpg"
+    }
     img.onload = () => {
       // Calcular proporção e aplicar melhor recorte
       const largura_original = img.width

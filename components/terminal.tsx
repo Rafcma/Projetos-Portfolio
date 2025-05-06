@@ -250,7 +250,7 @@ export default function Terminal() {
   /* #endregion */
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full max-w-5xl mx-auto">
       {/* #region Cabeçalho do Terminal */}
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
         <TerminalIcon className="h-4 w-4 text-white mr-2" />
