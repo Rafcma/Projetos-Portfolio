@@ -35,9 +35,8 @@ export function RetratoASCIICanvas({
     img.onerror = () => {
       console.error("Erro ao carregar a imagem. Verificando caminho alternativo...")
       // Fallback para uma imagem padrão caso a primeira falhe
-      img.src = "/images/minha-foto.jpg" // Tenta com extensão jpg
+      img.src = "/images/minha-foto.jpg"
     }
-
     img.onload = () => {
       // Calcular proporção e aplicar melhor recorte
       const largura_original = img.width

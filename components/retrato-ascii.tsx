@@ -23,7 +23,7 @@ export function RetratoASCII({ largura = 60, altura = 80 }: PropsRetratoASCII) {
     /* #region Carregamento e Processamento de Imagem */
     const img = new Image()
     img.crossOrigin = "anonymous"
-    img.src = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pose2.JPEG-6Ua6wNwVYcJtG1UMNf8o6wYovA9RUA.jpeg"
+    img.src = "/images/background-portfolio.png"
 
     img.onload = () => {
       // Calcular proporção
