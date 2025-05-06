@@ -302,7 +302,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("sobre")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <User className="h-3 w-3 mr-1" />
           Sobre
@@ -311,7 +311,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("educacao")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <GraduationCap className="h-3 w-3 mr-1" />
           Educação
@@ -320,7 +320,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("habilidades")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Shield className="h-3 w-3 mr-1" />
           Habilidades
@@ -329,7 +329,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("experiencia")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Briefcase className="h-3 w-3 mr-1" />
           Experiência
@@ -338,7 +338,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("projetos")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Code className="h-3 w-3 mr-1" />
           Projetos
@@ -347,7 +347,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("certificacoes")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Award className="h-3 w-3 mr-1" />
           Certificações
@@ -356,7 +356,7 @@ export default function Terminal() {
           variant="outline"
           size="sm"
           onClick={() => executar_comando("contato")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
         >
           <Mail className="h-3 w-3 mr-1" />
           Contato

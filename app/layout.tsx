@@ -16,7 +16,7 @@ const jetbrains_mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Rafael Costa Monte Alegre | Programador FrontEnd/BackEnd",
   description: "Portfólio de programação de Rafael Costa Monte Alegre - Desenvolvedor FrontEnd/BackEnd",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 /* #endregion */
 

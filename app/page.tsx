@@ -4,7 +4,8 @@
 import { useEffect, useState } from "react"
 import Terminal from "@/components/terminal"
 import SequenciaInicializacao from "@/components/sequencia-inicializacao"
-import { AlternadorCRT } from "@/components/alternador-crt"
+import { BotaoReiniciarConsole } from "@/components/alternador-crt"
+import { FundoCodigo } from "@/components/fundo-codigo"
 
 export default function Home() {
   /* #region Estados */
@@ -23,22 +24,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">
-      {/* #region Imagem de Fundo */}
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundColor: "#000000",
-        }}
-        aria-hidden="true"
-      >
-        {/* Sobreposição para melhor legibilidade do texto */}
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
+      {/* #region Fundo Animado */}
+      <FundoCodigo />
       {/* #endregion */}
 
-      {/* #region Alternador CRT */}
+      {/* #region Sobreposição para melhor legibilidade do texto */}
+      <div className="fixed inset-0 z-0 bg-black/40" />
+      {/* #endregion */}
+
+      {/* #region Botão Reiniciar Console */}
       <div className="absolute top-4 right-4 z-50">
-        <AlternadorCRT />
+        <BotaoReiniciarConsole />
       </div>
       {/* #endregion */}
 
