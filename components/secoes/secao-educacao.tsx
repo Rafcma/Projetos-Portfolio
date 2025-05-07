@@ -13,6 +13,7 @@ interface Educacao {
 
 export function SecaoEducacao() {
   /* #region Dados de Educação */
+  // Adicionar educação em Arquitetura
   const educacoes: Educacao[] = [
     {
       instituicao: "UNIVERSIDADE PROFESSOR EDSON ANTÔNIO VELANO – UNIFENAS",
@@ -25,6 +26,20 @@ export function SecaoEducacao() {
         "Desenvolvimento Web",
         "Banco de Dados",
         "Engenharia de Software",
+      ],
+    },
+    {
+      instituicao: "UNIVERSIDADE PROFESSOR EDSON ANTÔNIO VELANO – UNIFENAS",
+      curso: "Bacharelado em Arquitetura e Urbanismo",
+      periodo: "2020 - 2022",
+      disciplinas: [
+        "História da Arte na Antiguidade",
+        "Desenho Arquitetônico",
+        "Física e Geometria",
+        "Estética I, II",
+        "Projeto de Objetos",
+        "Estudos Socioeconômicos-Ambientais",
+        "Projeto e Maquete Arquitetônica",
       ],
     },
     {

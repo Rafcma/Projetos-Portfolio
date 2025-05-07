@@ -48,9 +48,16 @@ export function FundoCodigo() {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
+      // Modificar o efeito de fundo para adicionar brilho roxo
       // Definir cor e fonte para os caracteres
       ctx.fillStyle = "rgba(147, 51, 234, 0.3)" // Roxo com transparência
       ctx.font = `${tamanhoFonte}px 'JetBrains Mono', monospace`
+
+      // Adicionar efeito de brilho
+      ctx.shadowColor = "rgba(147, 51, 234, 0.5)"
+      ctx.shadowBlur = 5
+      ctx.shadowOffsetX = 0
+      ctx.shadowOffsetY = 0
 
       // Desenhar caracteres
       for (let i = 0; i < colunas; i++) {

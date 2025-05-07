@@ -66,6 +66,7 @@ export function SecaoHabilidades() {
       titulo: "Idiomas",
       habilidades: [
         { nome: "Inglês (C2)", nivel: 5 },
+        { nome: "Espanhol (C1)", nivel: 4 },
         { nome: "Português (Nativo)", nivel: 5 },
       ],
     },
@@ -119,7 +120,7 @@ export function SecaoHabilidades() {
   )
 }
 
-function BarraHabilidade({ nome, porcentagem }: { nome: string; porcentagem: number }) {
+const BarraHabilidade = ({ nome, porcentagem }: { nome: string; porcentagem: number }) => {
   return (
     <div>
       <div className="flex justify-between text-xs mb-1">
@@ -128,7 +129,7 @@ function BarraHabilidade({ nome, porcentagem }: { nome: string; porcentagem: num
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
         <div
-          className="h-full bg-primary rounded-full"
+          className="h-full bg-primary/70 rounded-full" // Adicionado /70 para reduzir o brilho
           style={{ width: `${porcentagem}%` }}
           role="progressbar"
           aria-valuenow={porcentagem}

@@ -27,11 +27,6 @@ export function SecaoContato() {
       descricao: "Disponível para chamadas e WhatsApp",
     },
     {
-      tipo: "endereco",
-      valor: "Alfenas, MG",
-      descricao: "Disponível para trabalho remoto ou presencial",
-    },
-    {
       tipo: "linkedin",
       valor: "linkedin.com/in/rafcma",
       link: "https://www.linkedin.com/in/rafcma",

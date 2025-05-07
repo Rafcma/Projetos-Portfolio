@@ -13,6 +13,7 @@ import { SecaoProjetos } from "@/components/secoes/secao-projetos"
 import { SecaoCertificacoes } from "@/components/secoes/secao-certificacoes"
 import { SecaoContato } from "@/components/secoes/secao-contato"
 import { LogoASCIIImagem } from "@/components/logo-ascii-imagem"
+import { SecaoSpaceInvaders } from "@/components/secoes/secao-space-invaders"
 
 /* #region Tipos de Terminal */
 type Comando = {
@@ -84,6 +85,9 @@ export default function Terminal() {
             <li>
               <span className="text-white font-bold">scan</span> - Executar uma verificação de segurança
             </li>
+            <li>
+              <span className="text-white font-bold">space-invaders</span> - Jogar Space Invaders no terminal
+            </li>
           </ul>
         </div>
       ),
@@ -136,6 +140,10 @@ export default function Terminal() {
         </div>
       ),
       descricao: "Executar uma verificação de segurança",
+    },
+    "space-invaders": {
+      acao: () => <SecaoSpaceInvaders />,
+      descricao: "Jogar Space Invaders no terminal",
     },
   }
   /* #endregion */
