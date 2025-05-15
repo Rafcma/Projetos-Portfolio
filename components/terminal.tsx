@@ -257,15 +257,14 @@ export default function Terminal() {
   }
   /* #endregion */
 
-  // Ajustar a barra de navegação para melhor responsividade em dispositivos móveis
-  // Modificar a navegação rápida para exibir corretamente em telas pequenas
+  /* #region Barra de Navegação Rápida */
   const BarraNavegacaoRapida = (
-    <nav className="mt-4 flex flex-wrap justify-center gap-1.5 px-2 overflow-x-auto pb-1">
+    <nav className="mt-4 botoes-navegacao px-2 pb-1">
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("sobre")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <User className="h-3 w-3 mr-1" />
         <span>Sobre</span>
@@ -274,7 +273,7 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("educacao")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <GraduationCap className="h-3 w-3 mr-1" />
         <span>Educação</span>
@@ -283,7 +282,7 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("habilidades")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <Shield className="h-3 w-3 mr-1" />
         <span>Habilidades</span>
@@ -292,7 +291,7 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("experiencia")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <Briefcase className="h-3 w-3 mr-1" />
         <span>Experiência</span>
@@ -301,7 +300,7 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("projetos")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <Code className="h-3 w-3 mr-1" />
         <span>Projetos</span>
@@ -310,7 +309,7 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("certificacoes")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <Award className="h-3 w-3 mr-1" />
         <span>Certificações</span>
@@ -319,13 +318,14 @@ export default function Terminal() {
         variant="outline"
         size="sm"
         onClick={() => executar_comando("contato")}
-        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
       >
         <Mail className="h-3 w-3 mr-1" />
         <span>Contato</span>
       </Button>
     </nav>
   )
+  /* #endregion */
 
   // Substituir a barra de navegação existente pelo componente otimizado
   return (
@@ -342,7 +342,7 @@ export default function Terminal() {
       {/* #region Área de Saída do Terminal */}
       <div
         ref={ref_terminal}
-        className="flex-1 bg-black border-x border-white/30 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm mobile-terminal-height"
+        className="flex-1 bg-black border-x border-white/30 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm mobile-terminal-height hide-scrollbar"
       >
         {historico_comandos.map((cmd, index) => (
           <div key={index} className="mb-3 sm:mb-4">

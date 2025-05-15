@@ -10,6 +10,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Esconder barra de rolagem mas manter funcionalidade */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer base {
@@ -119,5 +129,36 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
 
   .mobile-terminal-height {
     max-height: 70vh;
+  }
+
+  /* Esconder texto dos botões em telas pequenas */
+  .botao-navegacao span {
+    display: none;
+  }
+}
+
+/* Esconder barra de rolagem mas manter funcionalidade */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilo para botões de navegação */
+.botoes-navegacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Breakpoint para telas muito pequenas */
+@media (max-width: 380px) {
+  .botoes-navegacao {
+    max-width: 100%;
+    justify-content: center;
   }
 }

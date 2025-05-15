@@ -113,9 +113,11 @@ export function SecaoProjetos() {
             className="p-2 sm:p-3 border border-primary/20 rounded bg-primary/5 hover:bg-primary/10 transition-all duration-300"
           >
             <h3 className="text-primary font-bold text-sm sm:text-base">{projeto.titulo}</h3>
-            <pre className="text-[0.5rem] xs:text-[0.6rem] sm:text-xs my-1 sm:my-2 text-muted-foreground overflow-x-auto">
-              {projeto.diagrama}
-            </pre>
+            <div className="hide-scrollbar overflow-x-auto">
+              <pre className="text-[0.5rem] xs:text-[0.6rem] sm:text-xs my-1 sm:my-2 text-muted-foreground">
+                {projeto.diagrama}
+              </pre>
+            </div>
             <p className="text-xs sm:text-sm mb-1 sm:mb-2">{projeto.descricao}</p>
             <div className="flex flex-wrap gap-1 mt-2">
               {projeto.tecnologias.map((tech, idx) => (
