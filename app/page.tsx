@@ -24,25 +24,21 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">
-      {/* #region Fundo Animado */}
+      {/* Fundo Animado */}
       <FundoCodigo />
-      {/* #endregion */}
 
-      {/* #region Sobreposição para melhor legibilidade do texto */}
+      {/* Sobreposição para melhor legibilidade */}
       <div className="fixed inset-0 z-0 bg-black/40" />
-      {/* #endregion */}
 
-      {/* #region Botão Reiniciar Console */}
+      {/* Botão Reiniciar Console */}
       <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50 scale-75 sm:scale-100 origin-top-right">
         <BotaoReiniciarConsole />
       </div>
-      {/* #endregion */}
 
-      {/* #region Conteúdo Principal */}
+      {/* Conteúdo Principal */}
       <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8 h-screen flex flex-col relative z-10 max-w-5xl">
         {inicializando ? <SequenciaInicializacao /> : <Terminal />}
       </div>
-      {/* #endregion */}
     </main>
   )
 }

@@ -257,6 +257,77 @@ export default function Terminal() {
   }
   /* #endregion */
 
+  // Ajustar a barra de navegação para melhor responsividade em dispositivos móveis
+  // Modificar a navegação rápida para exibir corretamente em telas pequenas
+  const BarraNavegacaoRapida = (
+    <nav className="mt-4 flex flex-wrap justify-center gap-1.5 px-2 overflow-x-auto pb-1">
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("sobre")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <User className="h-3 w-3 mr-1" />
+        <span>Sobre</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("educacao")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <GraduationCap className="h-3 w-3 mr-1" />
+        <span>Educação</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("habilidades")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <Shield className="h-3 w-3 mr-1" />
+        <span>Habilidades</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("experiencia")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <Briefcase className="h-3 w-3 mr-1" />
+        <span>Experiência</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("projetos")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <Code className="h-3 w-3 mr-1" />
+        <span>Projetos</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("certificacoes")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <Award className="h-3 w-3 mr-1" />
+        <span>Certificações</span>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => executar_comando("contato")}
+        className="text-[0.65rem] xs:text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] min-w-0 h-8 px-2"
+      >
+        <Mail className="h-3 w-3 mr-1" />
+        <span>Contato</span>
+      </Button>
+    </nav>
+  )
+
+  // Substituir a barra de navegação existente pelo componente otimizado
   return (
     <div className="flex flex-col h-full max-w-5xl mx-auto">
       {/* #region Cabeçalho do Terminal */}
@@ -305,71 +376,7 @@ export default function Terminal() {
       {/* #endregion */}
 
       {/* #region Barra de Navegação Rápida */}
-      <nav className="mt-4 flex flex-wrap justify-center gap-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("sobre")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <User className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Sobre</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("educacao")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <GraduationCap className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Educação</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("habilidades")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <Shield className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Habilidades</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("experiencia")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <Briefcase className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Experiência</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("projetos")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <Code className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Projetos</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("certificacoes")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <Award className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Certificações</span>
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => executar_comando("contato")}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
-        >
-          <Mail className="h-3 w-3 mr-1" />
-          <span className="hidden xs:inline">Contato</span>
-        </Button>
-      </nav>
+      {BarraNavegacaoRapida}
       {/* #endregion */}
     </div>
   )
