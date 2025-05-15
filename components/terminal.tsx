@@ -259,69 +259,69 @@ export default function Terminal() {
 
   /* #region Barra de Navegação Rápida */
   const BarraNavegacaoRapida = (
-    <nav className="mt-4 botoes-navegacao px-2 pb-1">
+    <nav className="mt-4 botoes-navegacao px-2 pb-2 pt-1 overflow-visible">
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("sobre")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <User className="h-3 w-3 mr-1" />
-        <span>Sobre</span>
+        <User className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Sobre</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("educacao")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <GraduationCap className="h-3 w-3 mr-1" />
-        <span>Educação</span>
+        <GraduationCap className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Educação</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("habilidades")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Shield className="h-3 w-3 mr-1" />
-        <span>Habilidades</span>
+        <Shield className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Habilidades</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("experiencia")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Briefcase className="h-3 w-3 mr-1" />
-        <span>Experiência</span>
+        <Briefcase className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Experiência</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("projetos")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Code className="h-3 w-3 mr-1" />
-        <span>Projetos</span>
+        <Code className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Projetos</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("certificacoes")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Award className="h-3 w-3 mr-1" />
-        <span>Certificações</span>
+        <Award className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Certificados</span>
       </Button>
       <Button
         variant="outline"
         size="sm"
         onClick={() => executar_comando("contato")}
-        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)] h-8"
+        className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Mail className="h-3 w-3 mr-1" />
-        <span>Contato</span>
+        <Mail className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Contato</span>
       </Button>
     </nav>
   )
@@ -329,7 +329,7 @@ export default function Terminal() {
 
   // Substituir a barra de navegação existente pelo componente otimizado
   return (
-    <div className="flex flex-col h-full max-w-5xl mx-auto">
+    <div className="flex flex-col h-full max-w-5xl mx-auto overflow-visible">
       {/* #region Cabeçalho do Terminal */}
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
         <TerminalIcon className="h-4 w-4 text-white mr-2" />
@@ -376,7 +376,7 @@ export default function Terminal() {
       {/* #endregion */}
 
       {/* #region Barra de Navegação Rápida */}
-      {BarraNavegacaoRapida}
+      <div className="mt-4 w-full overflow-visible">{BarraNavegacaoRapida}</div>
       {/* #endregion */}
     </div>
   )
