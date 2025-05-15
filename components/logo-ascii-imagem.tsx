@@ -19,8 +19,8 @@ sobre  educacao  habilidades  experiencia  projetos  certificacoes  contato
   /* #endregion */
 
   return (
-    <div className="bg-black font-mono text-white mb-4">
-      <pre className="text-white whitespace-pre overflow-x-auto text-xs sm:text-sm md:text-base">{conteudo_logo}</pre>
+    <div className="bg-black p-2 font-mono text-white">
+      <pre className="logo-ascii whitespace-pre overflow-x-auto text-white">{conteudo_logo}</pre>
     </div>
   )
 }

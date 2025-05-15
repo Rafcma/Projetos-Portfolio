@@ -259,68 +259,61 @@ export default function Terminal() {
 
   /* #region Barra de Navegação Rápida */
   const BarraNavegacaoRapida = (
-    <nav className="mt-4 botoes-navegacao px-2 pb-2 pt-1 overflow-visible">
+    <nav className="mt-4 botoes-navegacao">
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("sobre")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <User className="botao-navegacao-icone" />
+        <User className="h-3 w-3 botao-navegacao-icone" />
         <span className="botao-navegacao-texto">Sobre</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("educacao")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <GraduationCap className="botao-navegacao-icone" />
+        <GraduationCap className="h-3 w-3 botao-navegacao-icone" />
         <span className="botao-navegacao-texto">Educação</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("habilidades")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Shield className="botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Habilidades</span>
+        <Shield className="h-3 w-3 botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Habilid.</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("experiencia")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Briefcase className="botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Experiência</span>
+        <Briefcase className="h-3 w-3 botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Exper.</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("projetos")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Code className="botao-navegacao-icone" />
+        <Code className="h-3 w-3 botao-navegacao-icone" />
         <span className="botao-navegacao-texto">Projetos</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("certificacoes")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Award className="botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Certificados</span>
+        <Award className="h-3 w-3 botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Certif.</span>
       </Button>
       <Button
         variant="outline"
-        size="sm"
         onClick={() => executar_comando("contato")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Mail className="botao-navegacao-icone" />
+        <Mail className="h-3 w-3 botao-navegacao-icone" />
         <span className="botao-navegacao-texto">Contato</span>
       </Button>
     </nav>
@@ -329,7 +322,7 @@ export default function Terminal() {
 
   // Substituir a barra de navegação existente pelo componente otimizado
   return (
-    <div className="flex flex-col h-full max-w-5xl mx-auto overflow-visible">
+    <div className="flex flex-col h-full max-w-5xl mx-auto">
       {/* #region Cabeçalho do Terminal */}
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
         <TerminalIcon className="h-4 w-4 text-white mr-2" />
@@ -376,7 +369,7 @@ export default function Terminal() {
       {/* #endregion */}
 
       {/* #region Barra de Navegação Rápida */}
-      <div className="mt-4 w-full overflow-visible">{BarraNavegacaoRapida}</div>
+      {BarraNavegacaoRapida}
       {/* #endregion */}
     </div>
   )
