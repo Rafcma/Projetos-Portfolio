@@ -103,9 +103,17 @@ body {
   }
 }
 
-/* Adicionar efeito de brilho para botões no hover */ \
-button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
+/* Corrigir problema com caractere inesperado '\' */
+/* Adicionar efeito de brilho para botões no hover */
+button:hover {
   box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Melhorar ajuste de texto e quebra de linha no terminal */
+.terminal-output {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.7rem;
 }
 
 /* Custom breakpoint for extra small screens */
@@ -114,7 +122,7 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
     display: inline;
   }
 
-  .xs\:text-xs {
+  .xs:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -122,13 +130,18 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
 
 /* Mobile-specific styles */
 @media (max-width: 640px) {
-  pre {
-    font-size: 0.7rem;
-    line-height: 1;
+  .mobile-terminal-height {
+    height: 75vh;
+    max-height: 75vh;
   }
 
-  .mobile-terminal-height {
-    max-height: 70vh;
+  pre,
+  code,
+  .terminal-text {
+    font-size: 0.7rem;
+    line-height: 1.1;
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 
   /* Esconder texto dos botões em telas pequenas */
@@ -147,12 +160,12 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
   display: none;
 }
 
-/* Estilo para botões de navegação */
+/* Ajustes para botões de navegação em mobile */
 .botoes-navegacao {
   display: flex;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 0.5rem 0;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.5rem;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -163,26 +176,29 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
 }
 
 .botao-navegacao {
-  flex: 1;
-  min-width: 0;
-  max-width: 80px;
+  min-width: auto;
+  width: 14%;
+  padding: 0.4rem 0.1rem !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0.25rem;
-  font-size: 0.65rem;
-  height: auto;
+  font-size: 0.6rem;
+  height: auto !important;
   border-radius: 0.25rem;
 }
 
 .botao-navegacao-icone {
-  margin-bottom: 0.25rem;
+  height: 0.95rem !important;
+  width: 0.95rem !important;
+  margin-bottom: 0.2rem;
   margin-right: 0 !important;
 }
 
 .botao-navegacao-texto {
-  font-size: 0.6rem;
+  font-size: 0.55rem;
+  line-height: 1;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -215,6 +231,11 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
   }
 }
 
+/* Conteúdo principal com espaço para botões fixos */
+.conteudo-principal {
+  padding-bottom: 4.5rem;
+}
+
 @media (min-width: 640px) {
   .botoes-navegacao {
     position: static;
@@ -228,22 +249,20 @@ button:hover, .hover\:shadow-\[0_0_8px_2px_rgba(255,255,255,0.2)\]:hover {
   }
 
   .botao-navegacao {
+    width: auto;
     flex-direction: row;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem !important;
   }
 
   .botao-navegacao-icone {
     margin-bottom: 0;
     margin-right: 0.25rem !important;
   }
-}
 
-/* Ajuste para o conteúdo principal não ficar escondido pelos botões fixos */
-.conteudo-principal {
-  padding-bottom: 4rem;
-}
+  .botao-navegacao-texto {
+    font-size: 0.7rem;
+  }
 
-@media (min-width: 640px) {
   .conteudo-principal {
     padding-bottom: 1rem;
   }

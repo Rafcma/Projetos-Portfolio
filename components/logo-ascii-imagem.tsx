@@ -3,7 +3,7 @@
 
 export function LogoASCIIImagem() {
   /* #region Conteúdo do Logo */
-  const conteudo_logo = `
+  const LOGO_ASCII = `
 $ echo "RAFAEL MONTE ALEGRE"
 RAFAEL MONTE ALEGRE
 
@@ -20,7 +20,9 @@ sobre  educacao  habilidades  experiencia  projetos  certificacoes  contato
 
   return (
     <div className="bg-black p-2 font-mono text-white">
-      <pre className="logo-ascii whitespace-pre overflow-x-auto text-white">{conteudo_logo}</pre>
+      <pre className="font-mono text-xs leading-[0.8] xs:text-sm sm:text-base text-white whitespace-pre overflow-x-auto logo-ascii terminal-text">
+        {LOGO_ASCII}
+      </pre>
     </div>
   )
 }

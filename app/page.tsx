@@ -35,8 +35,8 @@ export default function Home() {
         <BotaoReiniciarConsole />
       </div>
 
-      {/* Conteúdo Principal */}
-      <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8 h-screen flex flex-col relative z-10 max-w-5xl overflow-hidden conteudo-principal">
+      {/* Conteúdo Principal - Ajuste para tamanho em tela cheia */}
+      <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-6 h-[100dvh] flex flex-col relative z-10 max-w-5xl overflow-hidden conteudo-principal">
         {inicializando ? <SequenciaInicializacao /> : <Terminal />}
       </div>
     </main>

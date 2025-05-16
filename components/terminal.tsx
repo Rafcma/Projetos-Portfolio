@@ -259,13 +259,13 @@ export default function Terminal() {
 
   /* #region Barra de Navegação Rápida */
   const BarraNavegacaoRapida = (
-    <nav className="mt-4 botoes-navegacao">
+    <nav className="mt-2 botoes-navegacao">
       <Button
         variant="outline"
         onClick={() => executar_comando("sobre")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <User className="h-3 w-3 botao-navegacao-icone" />
+        <User className="botao-navegacao-icone" />
         <span className="botao-navegacao-texto">Sobre</span>
       </Button>
       <Button
@@ -273,48 +273,48 @@ export default function Terminal() {
         onClick={() => executar_comando("educacao")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <GraduationCap className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Educação</span>
+        <GraduationCap className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Edu</span>
       </Button>
       <Button
         variant="outline"
         onClick={() => executar_comando("habilidades")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Shield className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Habilid.</span>
+        <Shield className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Hab</span>
       </Button>
       <Button
         variant="outline"
         onClick={() => executar_comando("experiencia")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Briefcase className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Exper.</span>
+        <Briefcase className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Exp</span>
       </Button>
       <Button
         variant="outline"
         onClick={() => executar_comando("projetos")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Code className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Projetos</span>
+        <Code className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Proj</span>
       </Button>
       <Button
         variant="outline"
         onClick={() => executar_comando("certificacoes")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Award className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Certif.</span>
+        <Award className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Cert</span>
       </Button>
       <Button
         variant="outline"
         onClick={() => executar_comando("contato")}
         className="botao-navegacao bg-black/50 hover:bg-black/70 text-white border-white/30 transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(255,255,255,0.2)]"
       >
-        <Mail className="h-3 w-3 botao-navegacao-icone" />
-        <span className="botao-navegacao-texto">Contato</span>
+        <Mail className="botao-navegacao-icone" />
+        <span className="botao-navegacao-texto">Cont</span>
       </Button>
     </nav>
   )
@@ -335,15 +335,15 @@ export default function Terminal() {
       {/* #region Área de Saída do Terminal */}
       <div
         ref={ref_terminal}
-        className="flex-1 bg-black border-x border-white/30 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm mobile-terminal-height hide-scrollbar"
+        className="flex-1 bg-black border-x border-white/30 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm mobile-terminal-height hide-scrollbar terminal-output"
       >
         {historico_comandos.map((cmd, index) => (
-          <div key={index} className="mb-3 sm:mb-4">
-            <div className="flex items-center text-white/70">
+          <div key={index} className="mb-2 sm:mb-3">
+            <div className="flex items-start text-white/70 terminal-text">
               <span className="text-white mr-2">$</span>
               <span className="break-all">{cmd.entrada}</span>
             </div>
-            <div className="mt-1 ml-2 sm:ml-4 text-xs sm:text-sm">{cmd.saida}</div>
+            <div className="mt-1 ml-2 sm:ml-4 text-xs sm:text-sm terminal-text">{cmd.saida}</div>
           </div>
         ))}
       </div>
