@@ -167,8 +167,8 @@ export default function Terminal() {
           <div className="space-y-2">
             <LogoASCIIImagem />
             <p className="font-mono text-white">
-              Bem-vindo ao portfólio de programação de Rafael Costa Monte Alegre! Digite ajuda para ver os comandos
-              disponíveis.
+              Bem-vindo ao portfólio de programação de Rafael Costa Monte Alegre! <br />Digite ( ajuda ) para ver os comandos
+              disponíveis no console.
             </p>
           </div>
         ),
